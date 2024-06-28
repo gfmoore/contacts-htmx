@@ -2,8 +2,6 @@
 
 {% block content %}
 
-
-
 <form action="/contacts" method="get">
   <label for="search"></label>
   <input id="search" type="search" name="q" value="{{ request.args.get('q') or '' }}">
@@ -13,6 +11,7 @@
 <p>
   <a href="/contacts/new">Add Contact</a>
 </p>
+
 <table>
   <thead>
     <tr>
