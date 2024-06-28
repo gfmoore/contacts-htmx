@@ -1,8 +1,8 @@
-{% extends 'layout.html' %}
+{% extends 'index.html' %}
 
 {% block content %}
 
-<h1>{{contact.first}} {{contact.last}}</h1>
+<h2>{{contact.first}} {{contact.last}}</h2>
 
 <div>
     <div>Phone: {{contact.phone}}</div>
@@ -13,6 +13,5 @@
     <a href="/contacts/{{contact.id}}/edit">Edit</a>
     <a href="/contacts">Back</a>
 </p>
-
 
 {% endblock %}
