@@ -2,16 +2,17 @@
 
 {% block content %}
 
-<p>
-  <a href="/contacts/new">Add Contact</a>
-</p>
+
 
 <form action="/contacts" method="get">
-  <label for="search">Search Term</label>
+  <label for="search"></label>
   <input id="search" type="search" name="q" value="{{ request.args.get('q') or '' }}">
   <input type="submit" value="Search" />
 </form>
 
+<p>
+  <a href="/contacts/new">Add Contact</a>
+</p>
 <table>
   <thead>
     <tr>
