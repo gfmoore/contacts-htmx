@@ -3,7 +3,7 @@ import json
 # ========================================================
 # Contact Model
 # ========================================================
-PAGE_SIZE = 100
+PAGE_SIZE = 10
 
 class Contact:
     # mock contacts database
