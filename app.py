@@ -36,7 +36,7 @@ def contacts():
     return render_template("list.html", contacts=contacts_set, page=page, count=count )
 
 
-@app.route("/contacts/new", methods=["GET"])
+@app.route("/contacts/new", methods=["GET"]) 
 def contacts_new_get():
     return render_template("new.html", contact=Contact())
 
