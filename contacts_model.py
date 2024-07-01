@@ -1,4 +1,5 @@
 import json
+import time
 
 # ========================================================
 # Contact Model
@@ -50,6 +51,11 @@ class Contact:
     def delete(self):
         del Contact.db[self.id]
         Contact.save_db()
+        
+    @classmethod
+    def count(cls):
+        time.sleep(2)
+        return len(cls.db)
 
     @classmethod
     def all(cls, page=1):
