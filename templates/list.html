@@ -11,16 +11,18 @@
     hx-target="tbody" 
     hx-select="tbody tr"/
     hx-push-url=true
-    hx-indicator=#spinner>
+    hx-indicator=#spinnersearch>
     <input type="submit" value="Search" />
-    <img id=spinner class=htmx-indicator src="./static/img/spinning-circles.svg" width=20px height=20px alt="Searching..." />
+    <img id=spinnersearch class=htmx-indicator src="./static/img/spinning-circles.svg" width=20px height=20px alt="Searching..." />
 </form>
 
 <p>
   <a href="/contacts/new">Add Contact</a>
-  <span hx-get=/contacts/count hx-trigger=load>
-    <img id=spinner class=htmx-indicator src=/static/img/spinning-circles.svg />
-  </span>
+
+  <div hx-get=/contacts/count hx-trigger=load>
+    <img id=spinnercount class=htmx-indicator src="./static/img/spinning-circles.svg" width=20px height=20px alt="Counting contacts..." />
+  </div>
+
 </p>
 
 <table>

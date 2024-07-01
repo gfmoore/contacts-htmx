@@ -102,8 +102,7 @@ def contacts_email_get(contact_id=0):
 def contacts_delete(contact_id=0):
     contact = Contact.find(contact_id)
     contact.delete()
-    flash("Deleted Contact!")
-    return redirect("/contacts", 303)
+    return ""
 
 
 
