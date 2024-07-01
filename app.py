@@ -26,14 +26,19 @@ def settings():
 def contacts():
     search = request.args.get("q")
     page = int(request.args.get("page", 1))
-    count = Contact.count()
     if search is not None:
         contacts_set = Contact.search(search)
         if request.headers.get('HX-Triggers') == 'search':
-          return render_template("rows.html", contacts=contacts_set, page=page, count=count)
+          return render_template("rows.html", contacts=contacts_set, page=page)
     else:
         contacts_set = Contact.all(page)
-    return render_template("list.html", contacts=contacts_set, page=page, count=count )
+    return render_template("list.html", contacts=contacts_set, page=page)
+  
+  
+@app.route("/contacts/count")
+def contacts_count():
+    count = Contact.count()
+    return "(" + str(count) + " total Contacts)"
 
 
 @app.route("/contacts/new", methods=["GET"]) 
@@ -101,10 +106,6 @@ def contacts_delete(contact_id=0):
     return redirect("/contacts", 303)
 
 
-@app.route("/contacts/count")
-def contacts_count():
-    count = Contact.count()
-    return "(" + str(count) + " total Contacts)"
 
 
 if __name__ == "__main__":

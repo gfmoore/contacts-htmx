@@ -18,7 +18,7 @@
 
 <p>
   <a href="/contacts/new">Add Contact</a>
-  <span>({{ count }}  contacts )</span>
+  <span hx-get=/contacts/count hx-trigger=load></span>
 </p>
 
 <table>
