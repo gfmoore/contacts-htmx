@@ -4,5 +4,8 @@
   "editor.tabSize": 2,
   "editor.guides.highlightActiveIndentation": false,
   "editor.indentSize": "tabSize",
-  "git.postCommitCommand": "sync"
+  "git.postCommitCommand": "sync",
+  "editor.tokenColorCustomizations": {
+    "strings": "#9af0ae"
+  }
 }
